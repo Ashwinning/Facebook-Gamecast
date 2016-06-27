@@ -23,12 +23,14 @@ function CreateLiveVideoPost(userId, accessToken)
 
 function PublishLiveVideoPost(liveVideoId, accessToken)
 {
+    console.log("title = " + $('#title').val() + " | description = " + $('#description').val());
+    
     var url = "https://graph.facebook.com/"+liveVideoId;
     $.post(url, {  
           "access_token":accessToken,
-          "published": true//,
-          //"title": $('#title').val(),
-          //"description": $('#description').val()
+          "published": true,
+          "title": $('#title').val(),
+          "description": $('#description').val()
             },
       function( data ) {
                 console.log( data );

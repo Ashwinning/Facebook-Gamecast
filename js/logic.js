@@ -8,6 +8,13 @@ function CreateLiveVideoPost(userId, accessToken)
           "published": true },
       function( data ) {
                 console.log( "stream_url : " + data.stream_url );
+                var split = data.stream_url.split('/rtmp');
+                $('#url').each(function(){
+                    $(this).html(split[0]+'/rtmp');
+                });
+                $('#key').each(function(){
+                    $(this).html(split[1]);
+                });
                 console.log(data);
                 PublishLiveVideoPost(data.id, accessToken);
       },

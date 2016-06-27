@@ -1,3 +1,5 @@
+var authResponse;
+
 function CreateLiveVideoPost(userId, accessToken)
 {
     var url = "https://graph.facebook.com/"+userId+"/live_videos";
@@ -24,3 +26,12 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
       },
       "JSON" );
 }
+
+$( document ).ready(function() {
+    $('#go').click(function()
+        {
+            CreateLiveVideoPost(authResponse.userID, authResponse.accessToken);
+        }); 
+});
+    
+    

@@ -8,10 +8,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Stream games or cast your screen directly to your Facebook feed!">
+    
+    <script src="js/logic.js"></script>
 
-    <title>Gamecast - Stream games or cast your screen directly to your Facebook feed!</title>
+    <title>Gamecast</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -100,7 +101,7 @@
             <div class="input-group input-group-lg">
               <input type="text" class="form-control" placeholder="Enter description..." id="description">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
+                <button class="btn btn-default" type="button" id="go">Go!</button>
               </span>
             </div><!-- /input-group -->
         </div>
@@ -175,6 +176,7 @@
           function statusChangeCallback(response) {
             console.log('statusChangeCallback');
             console.log(response);
+            authResponse = response.authResponse;  
             // The response object is returned with a status field that lets the
             // app know the current login status of the person.
             // Full docs on the response object can be found in the documentation

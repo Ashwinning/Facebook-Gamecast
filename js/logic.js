@@ -25,7 +25,7 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
 {
     console.log("title = " + $('#title').val() + " | description = " + $('#description').val());
     
-    var url = "https://graph.facebook.com/"+liveVideoId;
+    var url = "https://graph.facebook.com/v2.6/"+liveVideoId;
     $.post(url, {  
           "access_token":accessToken,
           "published": true,

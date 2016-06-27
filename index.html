@@ -19,6 +19,7 @@
 
     <!-- Custom CSS -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
+    <link href="css/gamecast.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +27,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="https://use.fontawesome.com/2d8bd8d015.js"></script>
 
 </head>
 
@@ -88,7 +91,7 @@
                 the FB.login() function when clicked.
             -->
               
-            <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
+          <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
             </fb:login-button></p>
             <div id="status">
             </div>
@@ -101,9 +104,13 @@
             <div class="input-group input-group-lg">
               <input type="text" class="form-control" placeholder="Enter description..." id="description">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button" id="go">Go!</button>
+                <button class="btn btn-default facebook-share-button" type="button" id="go"><i class="fa fa-facebook facebook-icon" aria-hidden="true"></i> Share
+</button>
               </span>
             </div><!-- /input-group -->
+            <br>
+            <div class="alert alert-info" role="alert"><b>Heads up! :</b> The live video post won't show up on your wall untill you start streaming.</div>
+            
         </div>
         
         <div class="jumbotron hidden" id ="step3">

@@ -5,7 +5,7 @@ function CreateLiveVideoPost(userId, accessToken)
           "access_token":accessToken,
           "published": true },
       function( data ) {
-                console.log( data );
+                console.log( "stream_url : " + data.stream_url );
                 PublishLiveVideoPost(data.id, accessToken);
       },
       "JSON" );
@@ -16,7 +16,9 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
     var url = "https://graph.facebook.com/"+liveVideoId;
     $.post(url, {  
           "access_token":accessToken,
-          "published": true },
+          "published": true,
+          "title": $('#title').val()
+          "description": $('#description').val()},
       function( data ) {
                 console.log( data );
       },

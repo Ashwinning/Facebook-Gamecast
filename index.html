@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gamecast - Stream games staright to your Facebook feed!</title>
+    <title>Gamecast - Stream games or cast your screen directly to your Facebook feed!</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,11 +41,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Gamecast</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <!-- <ul class="nav navbar-nav">
                     <li>
                         <a href="#about">About</a>
                     </li>
@@ -55,7 +55,7 @@
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -93,9 +93,10 @@
         
         <div class="jumbotron" id ="step2">
             <h1>Step 2</h1>
-            <p>Add a description for your video!</p>
+            <p>Add a title and description for your video!</p>
+            <input type="text" class="form-control" placeholder="Enter title..." id="title">
             <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="Enter description...">
+              <input type="text" class="form-control" placeholder="Enter description..." id="description">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button">Go!</button>
               </span>
@@ -105,8 +106,8 @@
         <div class="jumbotron" id ="step3">
             <h1>Step 3</h1>
             <p>Here's the info you need to start streaming!</p>
-            <h3>URL: <span class="well well-sm">rtmp://rtmp-api.facebook.com:80/rtmp/</span></h3>
-            <h3>Stream Key: <span class="well well-sm">123563711404813?ds=1&a=AaanmH1_TP5Mo3RT</span></h3>
+            <h3>URL: <span class="well well-sm" id="url">rtmp://rtmp-api.facebook.com:80/rtmp/</span></h3>
+            <h3>Stream Key: <span class="well well-sm" id="key">123563711404813?ds=1&a=AaanmH1_TP5Mo3RT</span></h3>
             
             <p><a class="btn btn-primary btn-lg" href="#">Check out the full guide to start streaming!</a></p>
             
@@ -148,8 +149,8 @@
             </li>
             <li>
                 <h3>Under Broadcast Settings, Set Streaming Service as <span class="label label-info">Custom</span>,
-                    <br> the FMS URL as <span class="label label-info">***</span>,
-                    <br> and the Play Path/Sream Key as <span class="label label-info">---</span></h3>
+                    <br> the FMS URL as <span class="label label-info" id="url">***</span>,
+                    <br> and the Play Path/Sream Key as <span class="label label-info" id="key">---</span></h3>
                 <img src="https://i.gyazo.com/1d8755ce943ebefbe58c130515ffd354.png">
             </li>
             <li>

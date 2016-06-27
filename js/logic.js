@@ -9,10 +9,10 @@ function CreateLiveVideoPost(userId, accessToken)
       function( data ) {
                 console.log( "stream_url : " + data.stream_url );
                 var split = data.stream_url.split('rtmp/');
-                $('#url').each(function(){
+                $('.url').each(function(){
                     $(this).html(split[0]+'rtmp/');
                 });
-                $('#key').each(function(){
+                $('.key').each(function(){
                     $(this).html(split[1]);
                 });
                 console.log(data);

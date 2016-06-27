@@ -8,6 +8,7 @@ function CreateLiveVideoPost(userId, accessToken)
           "published": true },
       function( data ) {
                 console.log( "stream_url : " + data.stream_url );
+                console.log(data);
                 PublishLiveVideoPost(data.id, accessToken);
       },
       "JSON" );

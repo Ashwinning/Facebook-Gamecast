@@ -66,8 +66,8 @@
     <header class="header-image">
         <div class="headline">
             <div class="container">
-                <h1>One Page Wonder</h1>
-                <h2>Will Knock Your Socks Off</h2>
+                <h1>Gamecast</h1>
+                <h3>Stream games or cast your screen directly to your Facebook feed!</h3>
             </div>
         </div>
     </header>
@@ -86,9 +86,11 @@
                 the JavaScript SDK to present a graphical Login button that triggers
                 the FB.login() function when clicked.
             -->
-              <!--
+              
             <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
-            </fb:login-button> --></p>
+            </fb:login-button></p>
+            <div id="status">
+            </div>
         </div>
         
         <div class="jumbotron" id ="step2">
@@ -248,10 +250,6 @@
             });
           }
         </script>
-
-
-        <div id="status">
-        </div>
         
         <hr class="featurette-divider">
 

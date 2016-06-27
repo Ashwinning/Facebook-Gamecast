@@ -18,9 +18,9 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
     var url = "https://graph.facebook.com/"+liveVideoId;
     $.post(url, {  
           "access_token":accessToken,
-          "published": true,
-          "title": $('#title').val(),
-          "description": $('#description').val()
+          "published": true//,
+          //"title": $('#title').val(),
+          //"description": $('#description').val()
             },
       function( data ) {
                 console.log( data );

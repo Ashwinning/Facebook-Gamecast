@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>One Page Wonder - Start Bootstrap Template</title>
+    <title>Gamecast - Stream games staright to your Facebook feed!</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -74,7 +76,20 @@
     <div class="container">
 
         <hr class="featurette-divider">
-
+        
+        <div class="jumbotron">
+          <h1>Step 1</h1>
+          <p>Let's log into Facebook.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">
+            <!--
+                Below we include the Login Button social plugin. This button uses
+                the JavaScript SDK to present a graphical Login button that triggers
+                the FB.login() function when clicked.
+            -->
+        <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
+        </fb:login-button></a></p>
+        </div>
+        
         <script>
           // This is called with the results from from FB.getLoginStatus().
           function statusChangeCallback(response) {
@@ -156,14 +171,6 @@
           }
         </script>
 
-        <!--
-          Below we include the Login Button social plugin. This button uses
-          the JavaScript SDK to present a graphical Login button that triggers
-          the FB.login() function when clicked.
-        -->
-        <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
-        </fb:login-button>
-
 
         <div id="status">
         </div>
@@ -174,7 +181,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Made by Ashwin Sinha</p>
                 </div>
             </div>
         </footer>

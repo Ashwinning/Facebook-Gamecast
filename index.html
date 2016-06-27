@@ -86,8 +86,9 @@
                 the JavaScript SDK to present a graphical Login button that triggers
                 the FB.login() function when clicked.
             -->
+              <!--
             <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
-            </fb:login-button></p>
+            </fb:login-button> --></p>
         </div>
         
         <div class="jumbotron" id ="step2">
@@ -134,10 +135,34 @@
                 <h3>Download <a href="https://obsproject.com/">Open Broadcaster Software</a></h3>
                 <p style="font-size:1em">
                 Open Broadcaster Software is free and open source software for video recording and live streaming.
-                <br> Download it from https://obsproject.com/
+                <br> Download it from <a href="https://obsproject.com/"> https://obsproject.com/</a>
+                </p>
             </li>
             <li>
-            <h3>Do something else</h3>
+                <h3>In Open Broadcaster, Click on settings</h3>
+                <img src="https://i.gyazo.com/ae301ae1ab233a34dc17019e212acc21.png">
+            </li>
+            <li>
+                <h3>In settings, under encoding, make sure encoder is set to <span class="label label-default">x264</span>, <span class="label label-default">Use CBR</span> is enabled, and <span class="label label-default">Max Bitrate</span> is set to <span class="label label-default">2500</span></h3>
+                <img src="https://i.gyazo.com/97d0ceb9ebc975a46716c49b8bc21627.png">
+            </li>
+            <li>
+                <h3>Under Broadcast Settings, Set Streaming Service as Custom,
+                <br> the FMS URL as ***,
+                <br> and the Play Path/Sream Key as ---</h3>
+                <img src="https://i.gyazo.com/1d8755ce943ebefbe58c130515ffd354.png">
+            </li>
+            <li>
+                <h3>Under Video, make sure the resolution downscale is set to a value so that the maximum resolition is 1280x720, and the FPS is set to 30</h3>
+                <img src="https://i.gyazo.com/64a045233eeb9444cf4b9129f7c693b3.png">
+            </li>
+            <li>
+                <h3>Under Advanced, make sure the Keyframe Interval is set to 1.</h3>
+                <img src="https://i.gyazo.com/06e948e256131f1afcdb8036d33d460e.png">
+            </li>
+            <li>
+                <h3>Start streaming!</h3>
+                <img src="https://i.gyazo.com/53b1b13f2812298d7c7500f8f35d0ba5.gif">
             </li>
         </ol>
                 

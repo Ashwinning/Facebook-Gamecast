@@ -19,8 +19,9 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
     $.post(url, {  
           "access_token":accessToken,
           "published": true,
-          "title": $('#title').val()
-          "description": $('#description').val()},
+          "title": $('#title').val(),
+          "description": $('#description').val()
+            },
       function( data ) {
                 console.log( data );
       },

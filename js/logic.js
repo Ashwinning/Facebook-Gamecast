@@ -16,7 +16,7 @@ function CreateLiveVideoPost(userId, accessToken)
                     $(this).html(split[1]);
                 });
                 console.log(data);
-                //PublishLiveVideoPost(data.id, accessToken);
+                PublishLiveVideoPost(data.id, accessToken);
       },
       "JSON" );
 }

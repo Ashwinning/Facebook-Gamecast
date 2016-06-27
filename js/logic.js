@@ -39,11 +39,35 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
 }
 
 $( document ).ready(function() {
+    $('#GoToGuide').click(function(){
+        ScrollTo('#guide');
+    });
+    
     $('#go').click(function()
         {
         console.log("Go clicked");
             CreateLiveVideoPost(authResponse.userID, authResponse.accessToken);
+            EnableAndScrollTo('#step3');
+            Enable("#guidelunes");
+            Enable("#header");
+            Enable("#guide");
         }); 
 });
     
-    
+function EnableAndScrollTo(id)
+{
+    Enable(id);
+    ScrollTo(id);
+}
+
+function Enable(id)
+{
+    $(id).removeClass( "hidden" ).addClass( "animated fadeIn" );
+}
+
+function ScrollTo(id)
+{
+    $('html, body').animate({
+                        scrollTop: $(id).offset().top
+                    }, 2000);
+}

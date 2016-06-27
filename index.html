@@ -106,17 +106,17 @@
             </div><!-- /input-group -->
         </div>
         
-        <div class="jumbotron" id ="step3">
+        <div class="jumbotron hidden" id ="step3">
             <h1>Step 3</h1>
             <p>Here's the info you need to start streaming!</p>
-            <h3>URL: <span class="well well-sm url">rtmp://rtmp-api.facebook.com:80/rtmp/</span></h3>
-            <h3>Stream Key: <span class="well well-sm key">123563711404813?ds=1&a=AaanmH1_TP5Mo3RT</span></h3>
+            <h3>URL: <span class="well well-sm url"></span></h3>
+            <h3>Stream Key: <span class="well well-sm key"></span></h3>
             
-            <p><a class="btn btn-primary btn-lg" href="#">Check out the full guide to start streaming!</a></p>
+            <p><a class="btn btn-primary btn-lg" id="GoToGuide">Check out the full guide to start streaming!</a></p>
             
         </div>
         
-        <div class="panel panel-primary">
+        <div id="guidelines" class="panel panel-primary hidden">
           <div class="panel-heading">
             <h3 class="panel-title"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> &nbsp; Important</h3>
           </div>
@@ -131,10 +131,10 @@
           </div>
         </div>
         
-        <div class="page-header">
+        <div id="header" class="page-header hidden">
           <h1>How to start a stream <small>Using Open Broadcaster Software</small></h1>
         </div>
-        <ol style="font-size:1.5em">
+        <ol id="guide" class="hidden" style="font-size:1.5em">
             <li>
                 <h3>Download <a href="https://obsproject.com/">Open Broadcaster Software</a></h3>
                 <p style="font-size:1em">
@@ -184,6 +184,7 @@
             if (response.status === 'connected') {
               // Logged into your app and Facebook.
               testAPI();
+              EnableAndScrollTo('#step2');    
             } else if (response.status === 'not_authorized') {
               // The person is logged into Facebook, but not your app.
               document.getElementById('status').innerHTML = 'Please log ' +

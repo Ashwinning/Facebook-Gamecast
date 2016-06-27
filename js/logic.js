@@ -30,6 +30,7 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
 $( document ).ready(function() {
     $('#go').click(function()
         {
+        console.log("Go clicked");
             CreateLiveVideoPost(authResponse.userID, authResponse.accessToken);
         }); 
 });

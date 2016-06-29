@@ -75,7 +75,7 @@ function ScrollTo(id)
 function ScrollTo(id, padding)
 {
     $('html, body').animate({
-                        scrollTop: $(id).offset().top - padding;
+                        scrollTop: $(id).offset().top - padding
                     }, 2000);
 }
 

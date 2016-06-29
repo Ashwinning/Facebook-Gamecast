@@ -48,7 +48,7 @@ $( document ).ready(function() {
         console.log("Go clicked");
             CreateLiveVideoPost(authResponse.userID, authResponse.accessToken);
             EnableAndScrollTo('#step3');
-            Enable("#guidelunes");
+            Enable("#guidelines");
             Enable("#header");
             Enable("#guide");
         }); 

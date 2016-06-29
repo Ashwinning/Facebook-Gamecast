@@ -25,14 +25,18 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
 {
     console.log("title = " + $('#title').val() + " | description = " + $('#description').val());
     
-    var url = "https://graph.facebook.com/v2.6/"+liveVideoId;
-    $.post(url, {  
+    var package = {  
           "access_token":accessToken,
           //"published": true,
           "title": $('#title').val(),
           "description": $('#description').val(),
           "privacy": GetPrivacy()
-            },
+            };
+    
+    console.log(package);
+    
+    var url = "https://graph.facebook.com/v2.6/"+liveVideoId;
+    $.post(url, package,
       function( data ) {
                 console.log( data );
       },

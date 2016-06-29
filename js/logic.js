@@ -40,7 +40,7 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
 
 $( document ).ready(function() {
     $('#GoToGuide').click(function(){
-        ScrollTo('#guide');
+        ScrollTo('#header'); //It's the header for the guide
     });
     
     $('#go').click(function()

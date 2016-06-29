@@ -23,3 +23,8 @@
 .footer-text {
     font-size: 1.5em;
 }
+
+li h3
+{
+    line-height: 1.35em;
+}

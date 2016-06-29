@@ -10,9 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Stream games or cast your screen directly to your Facebook feed!">
-    
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
     <script src="js/logic.js"></script>
-
+    <script src="js/bootstrap-select.min.js"></script>
     <title>Gamecast</title>
 
     <!-- Bootstrap Core CSS -->
@@ -91,24 +91,42 @@
                 the JavaScript SDK to present a graphical Login button that triggers
                 the FB.login() function when clicked.
             --> 
-            <div id="facebook-login-button">
+            <!-- <div id="facebook-login-button">
             <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
             </fb:login-button> 
-            </div>
+            </div> -->
             <div id="status"></div>
         </div>
         
-        <div class="jumbotron hidden" id ="step2">
+        <div class="jumbotron" id ="step2">
             <h1>Step 2</h1>
             <p>Add a title and description for your video!</p>
-            <input type="text" class="form-control" placeholder="Enter title..." id="title">
-            <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="Enter description..." id="description">
-              <span class="input-group-btn">
-                <button class="btn btn-default facebook-share-button" type="button" id="go"><i class="fa fa-facebook facebook-icon" aria-hidden="true"></i> Share
-</button>
-              </span>
-            </div><!-- /input-group -->
+                        
+<button id="liveButton" class="btn btn-default facebook-share-button"><i class="fa fa-facebook facebook-icon" aria-hidden="true"></i> Create Live Stream To Facebook</button>
+<script>
+document.getElementById('liveButton').onclick = function() {
+  FB.ui({
+    display: 'popup',
+    method: 'live_broadcast',
+    phase: 'create',
+}, function(response) {
+    if (!response.id) {
+      console.log('dialog canceled');
+      return;
+    }
+    console.log('stream url:' + response.secure_stream_url);
+    FB.ui({
+      display: 'popup',
+      method: 'live_broadcast',
+      phase: 'publish',
+      broadcast_data: response,
+    }, function(response) {
+    console.log("video status: \n" + response.status);
+    });
+  });
+};
+</script>
+            <br>
             <br>
             <div class="alert alert-info" role="alert"><b>Heads up! :</b> The live video post won't show up on your wall until you start streaming.</div>
             

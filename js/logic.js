@@ -40,7 +40,7 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
 
 $( document ).ready(function() {
     $('#GoToGuide').click(function(){
-        ScrollTo('#guide', 150);
+        ScrollTo('#guide');
     });
     
     $('#go').click(function()
@@ -69,13 +69,6 @@ function ScrollTo(id)
 {
     $('html, body').animate({
                         scrollTop: $(id).offset().top
-                    }, 2000);
-}
-
-function ScrollTo(id, padding)
-{
-    $('html, body').animate({
-                        scrollTop: $(id).offset().top - padding
                     }, 2000);
 }
 

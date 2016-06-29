@@ -28,3 +28,11 @@ li h3
 {
     line-height: 1.35em;
 }
+#facebook-share-flex {
+    display: flex;
+    
+}
+
+#privacy-select {
+    margin-right: 5px;    
+}

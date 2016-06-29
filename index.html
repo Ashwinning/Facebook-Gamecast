@@ -11,6 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Stream games or cast your screen directly to your Facebook feed!">
     
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+    
     <script src="js/logic.js"></script>
 
     <title>Gamecast</title>
@@ -94,21 +101,28 @@
             <div id="facebook-login-button">
             <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
             </fb:login-button> 
-            </div>
+            </div> 
             <div id="status"></div>
         </div>
         
         <div class="jumbotron hidden" id ="step2">
             <h1>Step 2</h1>
             <p>Add a title and description for your video!</p>
-            <input type="text" class="form-control" placeholder="Enter title..." id="title">
-            <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="Enter description..." id="description">
-              <span class="input-group-btn">
-                <button class="btn btn-default facebook-share-button" type="button" id="go"><i class="fa fa-facebook facebook-icon" aria-hidden="true"></i> Share
+            <input type="text" class="form-control" placeholder="Enter title (max 255 chars) ..." id="title">
+            <br>
+            <textarea rows="4" class="form-control" placeholder="Enter description..." id="description"></textarea>
+              <br>
+                <div id="facebook-share-flex">
+                    <select class="selectpicker" id="privacy-select">
+                        <option value="EVERYONE" data-icon="glyphicon-globe">Public</option>
+                        <option value="FRIENDS_OF_FRIENDS" data-icon="glyphicon-user">+ Friends of Friends</option>
+                        <option value="ALL_FRIENDS" data-icon="glyphicon-user">Friends</option>
+                        <option value="SELF" data-icon="glyphicon-lock">Only Me</option>
+                    </select>
+                    &nbsp;
+                    <button class="btn btn-default facebook-share-button" type="button" id="go"><i class="fa fa-facebook facebook-icon" aria-hidden="true"></i> Share
 </button>
-              </span>
-            </div><!-- /input-group -->
+                </div>
             <br>
             <div class="alert alert-info" role="alert"><b>Heads up! :</b> The live video post won't show up on your wall until you start streaming.</div>
             

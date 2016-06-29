@@ -30,12 +30,26 @@ function PublishLiveVideoPost(liveVideoId, accessToken)
           "access_token":accessToken,
           //"published": true,
           "title": $('#title').val(),
-          "description": $('#description').val()
+          "description": $('#description').val(),
+          "privacy": GetPrivacy()
             },
       function( data ) {
                 console.log( data );
       },
       "JSON" );
+}
+
+function GetPrivacy()
+{
+    var val = $('#privacy-select').val();
+    if (val == "SELF")
+    {
+        return {"value":"CUSTOM", "friends": val};
+    }
+    else
+    {
+        return {"value": val};
+    }
 }
 
 $( document ).ready(function() {

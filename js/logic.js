@@ -71,3 +71,8 @@ function ScrollTo(id)
                         scrollTop: $(id).offset().top
                     }, 2000);
 }
+
+function Hide(id)
+{
+    $(id).addClass("animated fadeOutUp");
+}
